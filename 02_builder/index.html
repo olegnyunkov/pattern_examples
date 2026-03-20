@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Builder_pattern</title>
+</head>
+<body>
+    <div style="display: flex;width: 100%;padding: 250px 50px;">
+        <div class="js-product-card" style="display: flex;width: 20%;border: 1px solid blue;padding: 24px;flex-direction: column;gap: 20px;">
+            <span>Ссылка на товар: </span>
+            <span>Наименование товара: </span>
+            <span>Цена товара: </span>
+        </div>
+    </div>
+    <script src="ProductCardBuilder.js"></script>
+    <script>
+        const product = new ProductCardBuilder()
+        product.setPhoto('/images/photo01.png')
+        product.setName('Карточка товара')
+        product.setPrice('999')
+        product.renderProductCard()
+    </script>
+</body>
+</html>
